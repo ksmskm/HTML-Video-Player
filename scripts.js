@@ -55,10 +55,9 @@ video.addEventListener('timeupdate', handleProgess);
 
 toggle.addEventListener('click',togglePlay);
 skipButtons.forEach(button => button.addEventListener('click', skip));
-ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
 
-// ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate));
-// implement fullscreen
+ranges.forEach(range => range.addEventListener('click', handleRangeUpdate));
+ranges.forEach(range => range.addEventListener('mouseup', handleRangeUpdate));
 
 let mousedown = false;
 progress.addEventListener('click', scrub);
